@@ -20,10 +20,13 @@ app.get('/',(req,res)=>{
 })
 app.use(express.static('public'))
 app.use(cookieParser())
-const corsOptoins={
-    origin:true,
-    credentials:true
-}
+app.use(cors({
+    origin: [""],
+    methods: ["POST", "GET"],
+    credentials: true
+  }));
+
+  
 app.use(cors(corsOptoins))
 app.use('/auth',AuthRoutes)
 app.use('/blog',BlogRoutes)
