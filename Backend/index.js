@@ -21,12 +21,12 @@ app.get('/',(req,res)=>{
 app.use(express.static('public'))
 app.use(cookieParser())
 app.use(cors({
-    origin: [""],
+    origin: ["https://blog-app-v2-client.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
   }));
 
-  
+
 app.use(cors(corsOptoins))
 app.use('/auth',AuthRoutes)
 app.use('/blog',BlogRoutes)
