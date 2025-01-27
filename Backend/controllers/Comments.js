@@ -22,14 +22,6 @@ const AddComment = async (req, res) => {
             return res.status(404).json({ success: false, message: 'Blog post not found' });
         }
 
-
-
-
-
-
-
-
-
         
 
         blogPost.comments.push(newComment._id);
