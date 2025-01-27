@@ -1,8 +1,6 @@
 import Blgomodel from "../models/Blog.js";
 import CommentModel from "../models/Commments.js";
 
-
-
 const AddComment = async (req, res) => {
     try {
         const { postId, userId, comment } = req.body;
