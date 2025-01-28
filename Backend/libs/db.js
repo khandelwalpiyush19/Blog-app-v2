@@ -1,6 +1,4 @@
 import mongoose from "mongoose";
-
-
 const DBCon=async()=>{
     try {
           mongoose.connect(process.env.MONGDB_ULR)
